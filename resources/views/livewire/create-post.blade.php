@@ -1,9 +1,13 @@
 <div class="container">
     @if ($success)
-        <div class="alert alert-success">
-            Post has been created successfully
+        <div>
+            <div class="alert alert-success">
+                Post has been created successfully. <a href="{{ url('/home') }}">View all posts</a>
+            </div>
+            
         </div>
     @endif
+    <a href="{{ url('/home') }}">View all posts</a>
     <form wire:submit.prevent="create">
         <div class="form-group">
             <label for="Post title">Post title</label>

@@ -17,9 +17,7 @@ class CreatePost extends Component
         'body' => 'required'
     ];
 
-    public function mount(){
-        $this->success = false;
-    }
+    
     public function render()
     {
         return view('livewire.create-post')
@@ -38,5 +36,7 @@ class CreatePost extends Component
         ]);
         
         $this->success = true;
+
+        // return redirect()->to('/home');
     }
 }

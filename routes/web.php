@@ -22,5 +22,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/posts/create', [\App\Http\Livewire\CreatePost::class, '__invoke'])->middleware('auth');
+// Route::get('admin/posts', [\App\Http\Livewire\ListPost::class, '__invoke'])->middleware('auth');
+
 Route::get('post-alert', [\App\Http\Livewire\PostAlert::class, '__invoke']);
-Route::get('post/compose', [\App\Http\Livewire\ComposePost::class, '__invoke']);
