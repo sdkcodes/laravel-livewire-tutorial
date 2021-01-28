@@ -22,9 +22,9 @@ class CreatePost extends Component
     }
     public function render()
     {
-        return view('livewire.create-post');
-            // ->extends('layouts.app')
-            // ->section('content');
+        return view('livewire.create-post')
+            ->extends('layouts.app')
+            ->section('content');
     }
 
     public function create(){

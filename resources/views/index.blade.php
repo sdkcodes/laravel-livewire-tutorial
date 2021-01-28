@@ -1,5 +1,5 @@
 @extends('layouts.app')
 @section('content')
-    @livewire('create-post')    
-    @livewire('list-posts')
+    <h3>Welcome to our blog</h3>
+    @livewire('home-posts')
 @endsection
