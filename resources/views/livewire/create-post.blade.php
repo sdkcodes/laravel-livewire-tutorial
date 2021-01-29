@@ -7,7 +7,7 @@
             
         </div>
     @endif
-    <a href="{{ url('/home') }}">View all posts</a>
+    
     <form wire:submit.prevent="create">
         <div class="form-group">
             <label for="Post title">Post title</label>

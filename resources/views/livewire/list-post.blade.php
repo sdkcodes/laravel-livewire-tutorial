@@ -5,11 +5,11 @@
             <li class="list-group-item">
                 
                 <div class="float-right">
-                    <a href="#" class="btn btn-primary"><i class="fa fa-edit"></i> Edit</a>
+                    <a href='{{ url("posts/{$post->id}/edit") }}' class="btn btn-primary"><i class="fa fa-edit"></i> Edit</a>
                 </div>
                 <div>
                     <h5>{{ $post->title }}</h5>
-                    <p>{{ substr($post->body, 0, 200) }}</p>
+                    <p>{!! substr(strip_tags($post->body), 0, 200) !!}</p>
                     <small class="text-muted">Published {{ $post->created_at }}</small>
                 </div>
                 

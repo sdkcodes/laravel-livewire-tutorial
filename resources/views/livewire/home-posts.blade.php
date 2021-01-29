@@ -8,7 +8,7 @@
                         <h5 class="mb-1">{{ $post->title }}</h5>
                         <small>{{ $post->created_at->diffForHumans() }}</small>
                         </div>
-                        <p class="mb-1">{{ substr($post->body, 0, 200) }}</p>
+                        <p class="mb-1">{!! substr($post->body, 0, 200) !!}</p>
                         <small>By {{ $post->author->name }}</small>
                     </a>
                 @empty
