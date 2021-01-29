@@ -3,7 +3,7 @@
         <div class="card-body">
             <ul class="list-group list-group-flush">
                 @forelse ($posts as $post)
-                    <a href="#" class="list-group-item list-group-item-action">
+                    <a href='{{ url("post/$post->slug") }}' class="list-group-item list-group-item-action">
                         <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">{{ $post->title }}</h5>
                         <small>{{ $post->created_at->diffForHumans() }}</small>

@@ -17,12 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
-
 Auth::routes();
+
+Route::get('/post/{slug}', [\App\Http\Livewire\ReadPost::class, '__invoke']);
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/posts/create', [\App\Http\Livewire\CreatePost::class, '__invoke'])->middleware('auth');
 Route::get('/posts/{id}/edit', [\App\Http\Livewire\EditPost::class, '__invoke'])->middleware('auth');
-// Route::get('admin/posts', [\App\Http\Livewire\ListPost::class, '__invoke'])->middleware('auth');
 
 Route::get('post-alert', [\App\Http\Livewire\PostAlert::class, '__invoke']);
