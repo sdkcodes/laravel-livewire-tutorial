@@ -36,7 +36,5 @@ class CreatePost extends Component
         ]);
         
         $this->success = true;
-
-        // return redirect()->to('/home');
     }
 }
